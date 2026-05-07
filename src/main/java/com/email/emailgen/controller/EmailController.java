@@ -25,6 +25,7 @@ public class EmailController {
         validateRequest(request);
         String prompt = promptFactory.buildPrompt(request);
         return orchestrator.generate(prompt);
+       // https://quickmail-8wpj.onrender.com/api/email/generate
     }
 
     private void validateRequest(EmailRequest request) {

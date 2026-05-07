@@ -8,11 +8,11 @@ import java.util.Map;
 
 @RestController
 public class HealthController {
-
+    //     https://quickmail-8wpj.onrender.com/health
     @GetMapping("/")
     public ResponseEntity<Map<String, String>> root() {
         return ResponseEntity.ok(Map.of(
-                "status", "ok",
+                "status", "bs chal rha hai ",
                 "service", "QuickMail Backend",
                 "message", "QuickMail backend is running."
         ));

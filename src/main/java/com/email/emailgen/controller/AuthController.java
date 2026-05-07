@@ -28,25 +28,30 @@ public class AuthController {
     public MessageResponse sendOtp(@Valid @RequestBody SendOtpRequest request) {
         otpAuthService.sendOtp(request.getEmail());
         return new MessageResponse("OTP sent successfully.");
+        // https://quickmail-8wpj.onrender.com/auth/send-otp
     }
 
     @PostMapping("/account-status")
     public AccountStatusResponse accountStatus(@Valid @RequestBody AccountStatusRequest request) {
         return otpAuthService.getAccountStatus(request.getEmail());
+        // https://quickmail-8wpj.onrender.com/auth/account-status
     }
 
     @PostMapping("/verify-otp")
     public AuthResponse verifyOtp(@Valid @RequestBody VerifyOtpRequest request) {
         return otpAuthService.verifyOtp(request.getEmail(), request.getOtp());
+     //   https://quickmail-8wpj.onrender.com/auth/verify-otp
     }
 
     @PostMapping("/login")
     public AuthResponse login(@Valid @RequestBody PasswordLoginRequest request) {
         return otpAuthService.loginWithPassword(request.getEmail(), request.getPassword());
+    // https://quickmail-8wpj.onrender.com/auth/login
     }
 
     @PostMapping("/set-password")
     public MessageResponse setPassword(@Valid @RequestBody SetPasswordRequest request, Authentication authentication) {
         return otpAuthService.setPassword(authentication.getName(), request.getPassword());
+    // https://quickmail-8wpj.onrender.com/auth/set-password
     }
 }
