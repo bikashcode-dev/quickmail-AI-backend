@@ -143,12 +143,6 @@ src/main/java/com/email/emailgen
 cmd /c "call mvnw.cmd spring-boot:run"
 ```
 
-## Running Tests
-
-```powershell
-cmd /c "call mvnw.cmd test"
-```
-
 ## Deployment Notes
 
 - the backend is structured for deployment on Railway
@@ -156,9 +150,7 @@ cmd /c "call mvnw.cmd test"
 - local-only secrets should never be committed
 - protected routes depend on valid JWT tokens
 
-## Why This Project Is Strong
-
-This backend is a strong portfolio/interview project because it combines:
+## Why This Project Is 
 
 - real authentication flow
 - secure API design
