@@ -145,7 +145,7 @@ cmd /c "call mvnw.cmd spring-boot:run"
 
 ## Deployment Notes
 
-- the backend is structured for deployment on Railway
+- the backend is structured for deployment on Railway and render 
 - production configuration should come from environment variables
 - local-only secrets should never be committed
 - protected routes depend on valid JWT tokens
